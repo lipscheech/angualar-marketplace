@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {faArrowDown} from "@fortawesome/free-solid-svg-icons/faArrowDown";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
+import {Styles} from "@fortawesome/fontawesome-svg-core";
 
 @Component({
 	selector: 'app-big-card',
@@ -10,8 +11,22 @@ export class BigCardComponent implements OnInit {
 
 	@Input()
 	imageBackground: string = 'https://github.com/lipscheech/images-marketplace/blob/main/pexels-boluwatife-thesalt-2562498.jpg?raw=true';
+	@Input()
+	buttonText: string = 'learn more';
 
-	faArrowCircleDown = faArrowDown;
+	@Input()
+	buttonVisible: boolean = true;
+
+	@Input()
+	iconButton = faArrowDown;
+
+	@Input()
+	faStyle: Styles = {
+		'width': '1.4em'
+	}
+
+	@Output()
+	eventButton: EventEmitter<any> = new EventEmitter<any>();
 
 	bigCardStyle = {
 		'background-image': `url(${this.imageBackground})`,

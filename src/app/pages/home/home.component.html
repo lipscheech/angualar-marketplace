@@ -1,6 +1,15 @@
 <div class="container">
 	<app-nav-bar></app-nav-bar>
-	<div class="col-md-5">
-		<app-big-card></app-big-card>
+	<div class="d-flex justify-content-between">
+		<div class="col-md-6 me-2">
+			<app-big-card></app-big-card>
+		</div>
+		<div class="col-md-6">
+			<app-middle-card></app-middle-card>
+			<div class="d-flex col-12">
+				<app-small-card class="col-6"></app-small-card>
+				<app-small-card class="col-6"></app-small-card>
+			</div>
+		</div>
 	</div>
 </div>

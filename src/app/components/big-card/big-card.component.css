@@ -1,19 +1,20 @@
 .card {
-	height: 500px;
+	height: 600px;
 }
 
 .card-link {
 	text-decoration: none;
 }
 
-.mtr-26 {
-	margin-top: 26.75rem;
+.mtr-32 {
+	margin-top: 32.75rem;
 }
 
 .btn {
 	text-transform: uppercase;
 }
 
-white-text {
-	color: white;
+.btn-transparent {
+	background-color: transparent !important;
+	border: 1px solid white;
 }

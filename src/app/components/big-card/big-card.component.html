@@ -1,14 +1,14 @@
 <div class="card rounded-4">
 	<div
-		class="card-body rounded-4 position-relative transparent"
-		[ngStyle]="bigCardStyle"
-	>
-		<div class="d-flex justify-content-between bottom transparent mtr-26">
-			<button class="btn btn-light col-md-5">
-				learn more
-				<fa-icon [icon]="faArrowCircleDown" [classes]="['white-text']" ></fa-icon>
+		class="card-body rounded-4 position-relative transparent" [ngStyle]="bigCardStyle">
+		<div class="d-flex justify-content-between bottom transparent mtr-32">
+			<button class="btn btn-light border-black col-md-5 d-flex justify-content-between align-items-center"
+					  (click)="eventButton.emit()">
+				<p> {{buttonText}} </p>
+				<span class="bg-black  rounded-5 text-white" *ngIf="buttonVisible">
+					<fa-icon [classes]="['fa-w-24']" [styles]="faStyle" [icon]="iconButton"></fa-icon>
+				</span>
 			</button>
-			<button class="btn btn-primary col-md-5">Go somewhere</button>
 		</div>
 	</div>
 </div>
